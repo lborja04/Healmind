@@ -60,11 +60,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-green-600" />
-                <span className="text-gray-600">hola@healmind.com</span>
+                <span className="text-gray-600">info@healmind.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-green-600" />
-                <span className="text-gray-600">+1 (555) 123-4567</span>
+                <span className="text-gray-600">+593 96 878 6252</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-green-600" />
@@ -77,7 +77,7 @@ const Footer = () => {
         <div className="border-t border-green-100 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-600 text-sm">
-              © 2024 HealMind. Todos los derechos reservados.
+              © 2025 HealMind. Todos los derechos reservados.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <span className="text-gray-600 text-sm hover:text-green-600 transition-colors cursor-pointer">

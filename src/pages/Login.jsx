@@ -164,7 +164,7 @@ const Login = () => {
                       variant="outline"
                       className="w-full"
                     >
-                      <img  className="h-5 w-5 mr-2" alt="Google logo" src="https://images.unsplash.com/photo-1678483789111-3a04c4628bd6" />
+                      <img  className="h-5 w-5 mr-2" alt="Google logo" src="https://images.unsplash.com/photo-1646627927874-be8c13d0ae1a" />
                       Google
                     </Button>
                     <Button
@@ -194,28 +194,6 @@ const Login = () => {
             </Card>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-green-50 rounded-lg p-4"
-          >
-            <h3 className="text-sm font-medium text-green-800 mb-2">Acceso rápido para demo:</h3>
-            <div className="space-y-2 text-sm">
-              <div className="flex justify-between">
-                <span className="text-green-700">Paciente:</span>
-                <span className="text-green-600">paciente@demo.com</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-green-700">Psicólogo:</span>
-                <span className="text-green-600">psicologo@demo.com</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-green-700">Contraseña:</span>
-                <span className="text-green-600">demo123</span>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </div>
     </>

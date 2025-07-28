@@ -46,20 +46,20 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Correo Electrónico',
-      details: 'hola@healmind.com',
+      details: 'info@healmind.com',
       description: 'Respuesta en menos de 24 horas'
     },
     {
       icon: Phone,
       title: 'Teléfono',
-      details: '+52 55 1234 5678',
+      details: '+593 96 878 6252',
       description: 'Lunes a Viernes, 9:00 AM - 6:00 PM'
     },
     {
       icon: MapPin,
       title: 'Oficina Principal',
-      details: 'Espol, Guayaquil, Ecuador',
-      description: 'Campus Gustavo Galindo'
+      details: 'Campus Gustavo Galindo, ESPOL',
+      description: 'Edificio 13B Aula 101'
     },
     {
       icon: Clock,

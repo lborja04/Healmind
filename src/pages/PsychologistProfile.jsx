@@ -33,7 +33,7 @@ const PsychologistProfile = () => {
     specialty: 'Ansiedad y Estrés',
     rating: 4.9,
     reviews: 127,
-    price: '$800-1200',
+    price: '$20-60',
     location: 'Plaza Batán',
     modality: ['Virtual', 'Presencial'],
     image: 'Psicóloga joven profesional sonriente en consulta',

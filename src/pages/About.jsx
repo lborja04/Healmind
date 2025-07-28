@@ -38,26 +38,45 @@ const About = () => {
     }
   ];
 
-  const team = [
+ const team = [
     {
-      name: 'Dr. Miguel Hernández',
-      role: 'Director Médico',
-      description: 'Psicólogo clínico con 15 años de experiencia en salud mental digital.',
-      image: 'Director médico profesional sonriente'
+      name: 'Eder Asencio',
+      role: 'Fundador y Líder de Producto',
+      description: 'Responsable de la visión, diseño y desarrollo funcional de la plataforma, enfocándose en las necesidades del usuario.',
+      image: 'Fundador creativo y analítico'
     },
     {
-      name: 'Lic. Sofia Ramírez',
-      role: 'Directora de Operaciones',
-      description: 'Especialista en gestión de plataformas de salud y experiencia del usuario.',
-      image: 'Directora de operaciones profesional'
+      name: 'Luis Borja',
+      role: 'Cofundador y Desarrollador Full Stack',
+      description: 'Encargado de la arquitectura técnica y programación tanto del frontend como backend de la aplicación.',
+      image: 'Desarrollador profesional enfocado'
     },
     {
-      name: 'Dr. Carlos Mendoza',
-      role: 'Jefe de Calidad',
-      description: 'Responsable de la verificación y calidad de nuestros profesionales.',
-      image: 'Jefe de calidad profesional'
+      name: 'Bruno Asencio',
+      role: 'Líder de Investigación y UX',
+      description: 'Diseñador centrado en el usuario, lidera la investigación y pruebas de usabilidad para mejorar la experiencia.',
+      image: 'Investigador de UX analítico y empático'
+    },
+    {
+      name: 'Nayeli Beltrán',
+      role: 'Psicóloga Asesora y Curadora de Contenidos',
+      description: 'Apoya en la validación clínica de los perfiles, el enfoque terapéutico y la creación de contenidos educativos.',
+      image: 'Psicóloga joven profesional empática'
+    },
+    {
+      name: 'Allan Gonzáles',
+      role: 'Coordinador de Alianzas Estratégicas',
+      description: 'Encargado de establecer vínculos con centros psicológicos, universidades y aliados institucionales.',
+      image: 'Gestor de alianzas sonriente y profesional'
+    },
+    {
+      name: 'Luis Romero',
+      role: 'Especialista en Marketing Digital',
+      description: 'Diseña estrategias de posicionamiento en redes, SEO y campañas para alcanzar más usuarios que necesiten ayuda.',
+      image: 'Experto en marketing digital creativo'
     }
   ];
+
 
   const stats = [
     { number: '1,200+', label: 'Pacientes Atendidos' },
@@ -144,9 +163,15 @@ const About = () => {
                     jóvenes y adultos que enfrentan desafíos emocionales en un mundo cada vez más complejo.
                   </p>
                   <p>
-                    Fundada en 2023 por un equipo de psicólogos y tecnólogos, nuestra plataforma 
-                    surge de la experiencia directa con las barreras que enfrentan tanto pacientes 
-                    como profesionales de la salud mental.
+                    Nuestra historia comenzó en la Escuela Superior Politécnica del Litoral (ESPOL), donde, 
+                    en el marco de las clases de Emprendimiento y Gestión, identificamos un problema común: 
+                    la dificultad para acceder a servicios psicológicos confiables, económicos y continuos. 
+                    A partir de esa inquietud, un grupo de estudiantes multidisciplinarios unió sus conocimientos 
+                    en tecnología y salud para crear una solución real.
+                  </p>
+                  <p>
+                    Fundada en 2023 por este equipo de psicólogos y tecnólogos, nuestra plataforma surge de la experiencia 
+                    directa con las barreras que enfrentan tanto pacientes como profesionales de la salud mental.
                   </p>
                   <p>
                     Creemos firmemente que el bienestar mental no debe ser un lujo, sino un derecho 
@@ -159,9 +184,9 @@ const About = () => {
                 <img 
                   className="w-full h-96 object-cover rounded-2xl shadow-lg" 
                   alt="Equipo de HealMind trabajando juntos en oficina moderna"
-                 src="https://images.unsplash.com/photo-1627599936744-51d288f89af4" />
+                 src="/grupo.jpg" />
                 <div className="absolute -bottom-6 -right-6 bg-green-500 text-white px-6 py-3 rounded-full font-semibold">
-                  Desde 2023
+                  Desde 2025
                 </div>
               </div>
             </div>
@@ -253,7 +278,7 @@ const About = () => {
                       <img 
                         className="w-24 h-24 rounded-full object-cover mx-auto mb-4" 
                         alt={`Foto de ${member.name}`}
-                       src="https://images.unsplash.com/photo-1644424235476-295f24d503d9" />
+                        src={`/${member.name.toLowerCase().replace(/ /g, '-')}.png`} />
                       <CardTitle className="text-xl">{member.name}</CardTitle>
                       <p className="text-green-600 font-medium">{member.role}</p>
                     </CardHeader>

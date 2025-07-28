@@ -29,7 +29,7 @@ const BookingSystem = () => {
   const psychologist = {
     name: 'Dra. Ana Sofía Martínez',
     specialty: 'Ansiedad y Estrés',
-    price: '$1000',
+    price: '$30',
     image: 'Psicóloga profesional sonriente en consulta'
   };
 
