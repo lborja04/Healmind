@@ -29,7 +29,7 @@ const PsychologistDashboard = () => {
 
   const weeklyStats = {
     totalSessions: 28,
-    totalEarnings: 28000,
+    totalEarnings: 1120,
     newPatients: 5,
     averageRating: 4.9
   };
@@ -457,8 +457,8 @@ const PsychologistDashboard = () => {
                     </CardHeader>
                     <CardContent>
                       <div className="text-center mb-6">
-                        <div className="text-4xl font-bold text-green-600 mb-2">$45,600</div>
-                        <p className="text-gray-600">Enero 2024</p>
+                        <div className="text-4xl font-bold text-green-600 mb-2">$1,520</div>
+                        <p className="text-gray-600">Julio 2025</p>
                       </div>
                       <div className="space-y-3">
                         <div className="flex justify-between items-center">
@@ -467,16 +467,16 @@ const PsychologistDashboard = () => {
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-gray-600">Tarifa promedio</span>
-                          <span className="font-semibold">$1,200</span>
+                          <span className="font-semibold">$40</span>
                         </div>
                         <div className="flex justify-between items-center">
                           <span className="text-gray-600">Comisión HealMind (10%)</span>
-                          <span className="font-semibold text-red-600">-$4,560</span>
+                          <span className="font-semibold text-red-600">-$152</span>
                         </div>
                         <hr className="my-2" />
                         <div className="flex justify-between items-center text-lg">
                           <span className="font-semibold">Total neto</span>
-                          <span className="font-bold text-green-600">$41,040</span>
+                          <span className="font-bold text-green-600">$1,368</span>
                         </div>
                       </div>
                     </CardContent>
@@ -490,11 +490,11 @@ const PsychologistDashboard = () => {
                       <div className="space-y-4">
                         <div className="flex justify-between items-center p-3 border border-gray-100 rounded-lg">
                           <div>
-                            <p className="font-medium">Pago semanal</p>
-                            <p className="text-sm text-gray-600">8-14 Enero 2024</p>
+                            <p className="font-medium">Pago mensual</p>
+                            <p className="text-sm text-gray-600">Abril 2025</p>
                           </div>
                           <div className="text-right">
-                            <p className="font-semibold text-green-600">$10,260</p>
+                            <p className="font-semibold text-green-600">$1,260</p>
                             <Badge variant="secondary" className="bg-green-100 text-green-700">
                               Pagado
                             </Badge>
@@ -502,11 +502,11 @@ const PsychologistDashboard = () => {
                         </div>
                         <div className="flex justify-between items-center p-3 border border-gray-100 rounded-lg">
                           <div>
-                            <p className="font-medium">Pago semanal</p>
-                            <p className="text-sm text-gray-600">1-7 Enero 2024</p>
+                            <p className="font-medium">Pago mensual</p>
+                            <p className="text-sm text-gray-600">Mayo 2025</p>
                           </div>
                           <div className="text-right">
-                            <p className="font-semibold text-green-600">$9,540</p>
+                            <p className="font-semibold text-green-600">$1,540</p>
                             <Badge variant="secondary" className="bg-green-100 text-green-700">
                               Pagado
                             </Badge>
@@ -514,11 +514,11 @@ const PsychologistDashboard = () => {
                         </div>
                         <div className="flex justify-between items-center p-3 border border-gray-100 rounded-lg">
                           <div>
-                            <p className="font-medium">Pago pendiente</p>
-                            <p className="text-sm text-gray-600">15-21 Enero 2024</p>
+                            <p className="font-medium">Pago mensual</p>
+                            <p className="text-sm text-gray-600">Junio 2025</p>
                           </div>
                           <div className="text-right">
-                            <p className="font-semibold text-orange-600">$8,100</p>
+                            <p className="font-semibold text-orange-600">$1,100</p>
                             <Badge variant="secondary" className="bg-orange-100 text-orange-700">
                               Pendiente
                             </Badge>
@@ -577,12 +577,12 @@ const PsychologistDashboard = () => {
                         <label className="block text-sm font-medium text-gray-700 mb-2">Tarifa por Sesión</label>
                         <input 
                           type="text" 
-                          defaultValue="$800-1200" 
+                          defaultValue="$20-60" 
                           className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"
                         />
                       </div>
                       <div>
-                        <label className="block text-sm font-medium text-gray-700 mb-2">Cédula Profesional</label>
+                        <label className="block text-sm font-medium text-gray-700 mb-2">Cédula</label>
                         <input 
                           type="text" 
                           defaultValue="12345678" 

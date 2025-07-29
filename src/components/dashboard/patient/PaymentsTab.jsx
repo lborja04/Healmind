@@ -48,16 +48,16 @@ const PaymentsTab = ({ paymentMethods, onFeatureClick }) => {
             <div className="flex justify-between items-center py-2 border-b border-gray-100">
               <div>
                 <p className="font-medium">Sesión con Dra. Martínez</p>
-                <p className="text-sm text-gray-600">08 Ene 2024</p>
+                <p className="text-sm text-gray-600">29 Jul 2025</p>
               </div>
-              <span className="font-semibold text-green-600">$1,000</span>
+              <span className="font-semibold text-green-600">$20</span>
             </div>
             <div className="flex justify-between items-center py-2 border-b border-gray-100">
               <div>
                 <p className="font-medium">Sesión con Dra. Martínez</p>
-                <p className="text-sm text-gray-600">01 Ene 2024</p>
+                <p className="text-sm text-gray-600">01 Ago 2025</p>
               </div>
-              <span className="font-semibold text-green-600">$1,000</span>
+              <span className="font-semibold text-green-600">$20</span>
             </div>
           </div>
         </CardContent>

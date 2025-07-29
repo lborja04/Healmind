@@ -7,6 +7,8 @@ import { Button } from '@/components/ui/button';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const usuario = JSON.parse(localStorage.getItem("usuario"));
+
 
   const navItems = [
     { name: 'Inicio', path: '/' },
@@ -31,33 +33,56 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`text-sm font-medium transition-colors hover:text-green-600 ${
-                  isActive(item.path) ? 'text-green-600' : 'text-gray-700'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {!usuario &&
+              navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  className={`text-sm font-medium transition-colors hover:text-green-600 ${
+                    isActive(item.path) ? 'text-green-600' : 'text-gray-700'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))
+            }
           </div>
+
 
           {/* Desktop Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link to="/iniciar-sesion">
-              <Button variant="ghost" size="sm" className="text-gray-700">
-                <User className="h-4 w-4 mr-2" />
-                Iniciar Sesión
-              </Button>
-            </Link>
-            <Link to="/registrarse">
-              <Button size="sm" className="bg-green-600 hover:bg-green-700">
-                Registrarse
-              </Button>
-            </Link>
+            {usuario ? (
+              <>
+                <span className="text-sm text-gray-700 capitalize">Hola, {usuario.nombre}</span>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => {
+                    localStorage.removeItem("usuario");
+                    window.location.href = "/"; // o navigate('/')
+                  }}
+                  className="text-red-600"
+                >
+                  Cerrar Sesión
+                </Button>
+              </>
+            ) : (
+              <>
+                <Link to="/iniciar-sesion">
+                  <Button variant="ghost" size="sm" className="text-gray-700">
+                    <User className="h-4 w-4 mr-2" />
+                    Iniciar Sesión
+                  </Button>
+                </Link>
+                <Link to="/registrarse">
+                  <Button size="sm" className="bg-green-600 hover:bg-green-700">
+                    Registrarse
+                  </Button>
+                </Link>
+              </>
+            )}
           </div>
+
 
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -79,31 +104,54 @@ const Navbar = () => {
             className="md:hidden py-4 border-t border-green-100"
           >
             <div className="flex flex-col space-y-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`text-sm font-medium transition-colors hover:text-green-600 ${
-                    isActive(item.path) ? 'text-green-600' : 'text-gray-700'
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              {!usuario &&
+                navItems.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.path}
+                    onClick={() => setIsOpen(false)}
+                    className={`text-sm font-medium transition-colors hover:text-green-600 ${
+                      isActive(item.path) ? 'text-green-600' : 'text-gray-700'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                ))
+              }
+
               <div className="flex flex-col space-y-2 pt-4 border-t border-green-100">
-                <Link to="/iniciar-sesion" onClick={() => setIsOpen(false)}>
-                  <Button variant="ghost" size="sm" className="w-full justify-start text-gray-700">
-                    <User className="h-4 w-4 mr-2" />
-                    Iniciar Sesión
-                  </Button>
-                </Link>
-                <Link to="/registrarse" onClick={() => setIsOpen(false)}>
-                  <Button size="sm" className="w-full bg-green-600 hover:bg-green-700">
-                    Registrarse
-                  </Button>
-                </Link>
+                {usuario ? (
+                  <>
+                    <span className="text-sm text-gray-700 capitalize px-2">Hola, {usuario.nombre}</span>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      className="w-full justify-start text-red-600"
+                      onClick={() => {
+                        localStorage.removeItem("usuario");
+                        window.location.href = "/";
+                      }}
+                    >
+                      Cerrar Sesión
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <Link to="/iniciar-sesion" onClick={() => setIsOpen(false)}>
+                      <Button variant="ghost" size="sm" className="w-full justify-start text-gray-700">
+                        <User className="h-4 w-4 mr-2" />
+                        Iniciar Sesión
+                      </Button>
+                    </Link>
+                    <Link to="/registrarse" onClick={() => setIsOpen(false)}>
+                      <Button size="sm" className="w-full bg-green-600 hover:bg-green-700">
+                        Registrarse
+                      </Button>
+                    </Link>
+                  </>
+                )}
               </div>
+
             </div>
           </motion.div>
         )}

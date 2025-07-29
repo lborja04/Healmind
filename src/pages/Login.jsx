@@ -7,6 +7,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/components/ui/use-toast';
+import { useNavigate } from 'react-router-dom';
+
 
 const Login = () => {
   const { toast } = useToast();
@@ -15,6 +17,24 @@ const Login = () => {
     email: '',
     password: ''
   });
+  const navigate = useNavigate();
+
+  // Usuarios simulados
+  const cuentas = [
+    {
+      email: "paciente@demo.com",
+      password: "demo123",
+      rol: "paciente",
+      nombre: "María"
+    },
+    {
+      email: "psicologo@demo.com",
+      password: "demo123",
+      rol: "psicologo",
+      nombre: "Ana"
+    }
+  ];
+
 
   const handleInputChange = (e) => {
     setFormData({
@@ -25,11 +45,36 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    toast({
-      title: "🚧 Esta funcionalidad no está implementada aún",
-      description: "¡Pero no te preocupes! Será implementada pronto! 🚀",
-    });
+
+    const { email, password } = formData;
+    const usuario = cuentas.find(
+      (cuenta) => cuenta.email === email && cuenta.password === password
+    );
+
+    if (usuario) {
+      toast({
+        title: "✅ Inicio de sesión exitoso",
+        description: `Bienvenido, ${usuario.nombre}`,
+      });
+
+      // Guardar sesión simulada (opcional)
+      localStorage.setItem("usuario", JSON.stringify(usuario));
+
+      // Redirigir según rol
+      if (usuario.rol === "paciente") {
+        navigate("/dashboard-paciente");
+      } else if (usuario.rol === "psicologo") {
+        navigate("/dashboard-psicologo");
+      }
+
+    } else {
+      toast({
+        title: "❌ Error de autenticación",
+        description: "Correo o contraseña incorrectos.",
+      });
+    }
   };
+
 
   return (
     <>
@@ -192,6 +237,29 @@ const Login = () => {
                 </div>
               </CardContent>
             </Card>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="bg-green-50 rounded-lg p-4"
+          >
+            <h3 className="text-sm font-medium text-green-800 mb-2">Acceso rápido para demo:</h3>
+            <div className="space-y-2 text-sm">
+              <div className="flex justify-between">
+                <span className="text-green-700">Paciente:</span>
+                <span className="text-green-600">paciente@demo.com</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-green-700">Psicólogo:</span>
+                <span className="text-green-600">psicologo@demo.com</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-green-700">Contraseña:</span>
+                <span className="text-green-600">demo123</span>
+              </div>
+            </div>
           </motion.div>
 
         </div>

@@ -67,21 +67,21 @@ const PsychologistProfile = () => {
   const reviews = [
     {
       id: 1,
-      name: 'María G.',
+      name: 'Anónimo',
       rating: 5,
       date: 'Hace 2 semanas',
       comment: 'La Dra. Martínez me ayudó enormemente con mi ansiedad. Sus técnicas de mindfulness han sido transformadoras para mí.'
     },
     {
       id: 2,
-      name: 'Carlos R.',
+      name: 'Anónimo',
       rating: 5,
       date: 'Hace 1 mes',
       comment: 'Excelente profesional. Muy empática y con gran conocimiento. Las sesiones virtuales son muy cómodas.'
     },
     {
       id: 3,
-      name: 'Ana L.',
+      name: 'Anónimo',
       rating: 4,
       date: 'Hace 2 meses',
       comment: 'Me siento mucho mejor después de trabajar con ella. Recomiendo ampliamente sus servicios.'

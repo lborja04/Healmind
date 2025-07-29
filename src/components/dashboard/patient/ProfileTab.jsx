@@ -30,7 +30,7 @@ const ProfileTab = ({ onFeatureClick }) => {
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
-            <input type="tel" defaultValue="+52 55 1234 5678" className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"/>
+            <input type="tel" defaultValue="+593 99 233 7130" className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500"/>
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">Fecha de Nacimiento</label>
